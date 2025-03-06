@@ -12,6 +12,12 @@
     --color-accent: #ffd11a;
     --color-red: #f50;
 
+    --gradient: linear-gradient(
+        45deg,
+        var(--color-dark-15) 64%,
+        var(--color-accent) 134%
+    );
+
     --font-family-base: 'Inter', sans-serif;
     --font-family-accent: 'Kumbh Sans', sans-serif;
 

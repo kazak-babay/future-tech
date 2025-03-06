@@ -35,6 +35,18 @@
     translate: -50% -50%;
 }
 
+@mixin abs-x {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+}
+
+@mixin abs-y {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
 @mixin square($size) {
     width: $size;
     height: $size;
@@ -51,4 +63,19 @@
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
+}
+
+// Сюда свои
+
+@mixin header-shadow($color) {
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(100) rem(200);
+
+    @keyframes scrolling-header {
+        to {
+            box-shadow: 0 0 1rem 0 $color;
+        }
+    }
 }
